@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GETestSuite">
+    <listeners>
+        <listener class-name="generics.Listener"/>
+    </listeners>
+    <test name="TestGoogleChrome">
+        <parameter name="browser" value="chrome"/>
+<classes>
+     <class name="scripts.TestRegistrationCorporate">
+        <methods>
+       <include name="testRegistrationBusiness"/>
+        </methods>
+      </class>
+       <class name="scripts.TestRegistrationStartUp">
+           <methods>
+               <include name="testRegisterationStartUp"/>
+           </methods>
+       </class>
+        <class name="scripts.TestLoginStartUp">
+            <methods>
+                <include name="testLoginStartUps"/>
+            </methods>
+        </class>
+        <class name="scripts.TestLoginBusiness">
+            <methods>
+                <include name="testLoginBusiness"/>
+            </methods>
+           </class>
+    </classes>
+    </test>
+    <test name="testStartUp">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="login" value="StartUp"/>
+        <classes>
+        <class name="scripts.TestChangePreferences">
+            <methods>
+                <include name="testChangePreferencesFun"/>
+            </methods>
+        </class>
+            <class name="scripts.TestEditMyProfile"/>
+            <class name="scripts.TestBusinessTraction"/>
+            <class name="scripts.TestManagementTeam"/>
+            <class name="scripts.TestAdvisoryBoard"/>
+            <class name="scripts.TestAboutMyProfile"/>
+            <class name="scripts.TestSocialMediaMyProfile"/>
+            <class name="scripts.TestProductMyProfile"/>
+            <class name="scripts.TestPatentMyProfile"/>
+        </classes>
+    </test>
+    <test name="testCorporate">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="login" value="Corporate"/>
+        <classes>
+        <class name="scripts.TestAdvancedCombinedSearch">
+            <methods>
+                <include name="testAdvancedTopTechSearch"/>
+                <include name="testAdvUppTechSearch"/>
+                <include name="testAdvMidTechSearch"/>
+                <include name="testAdvLowTechSearch"/>
+                <include name="testAdvTopIndusSearch"/>
+                <include name="testAdvUppIndusSearch"/>
+                <include name="testAdvSolutionSearch"/>
+            </methods>
+        </class>
+        <class name="scripts.TestAdvancedIndividualSearch"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

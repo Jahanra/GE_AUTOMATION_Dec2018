@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[About to begin executing Suite Default Suite]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BaseTestLogin.initReport]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BaseTestLogin.initReport]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing Test Ge_Regression15jan]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BaseTestLogin.initGlobalVar]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BaseTestLogin.initGlobalVar]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BaseTestLogin.initApplication]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BaseTestLogin.initApplication]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BaseTestLogin.preCondition]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BaseTestLogin.preCondition]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : TestProductMyProfile.testProduct]]>
+    </line>
+    <line>
+      <![CDATA[The value of products type fetched is-------->Beta]]>
+    </line>
+    <line>
+      <![CDATA[The value of products type fetched is-------->Market Ready]]>
+    </line>
+    <line>
+      <![CDATA[The value 1 after Update of product name---------->product1]]>
+    </line>
+    <line>
+      <![CDATA[The value 2 after Update of product name--------->Mobile Gadgets]]>
+    </line>
+    <line>
+      <![CDATA[The value 1 after update of product stage------->Beta]]>
+    </line>
+    <line>
+      <![CDATA[The value 2after update of product stage------->Market Ready]]>
+    </line>
+    <line>
+      <![CDATA[Exception in validating the products data in UIclass pages.ProductsMyProfilePage]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : TestProductMyProfile.testProduct]]>
+    </line>
+    <line>
+      <![CDATA[Test Method resides in scripts.TestProductMyProfile]]>
+    </line>
+    <line>
+      <![CDATA[Test Status: Pass]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BaseTestLogin.postCondition]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BaseTestLogin.postCondition]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BaseTestLogin.closeApplication]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BaseTestLogin.closeApplication]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BaseTestLogin.CloseTheConnection]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BaseTestLogin.CloseTheConnection]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing test Ge_Regression15jan]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : BaseTestLogin.publishReport]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : BaseTestLogin.publishReport]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2018-02-15T19:42:44Z" name="Default Suite" finished-at="2018-02-15T19:45:09Z" duration-ms="144220">
+    <groups>
+    </groups>
+    <test started-at="2018-02-15T19:42:44Z" name="Ge_Regression15jan" finished-at="2018-02-15T19:45:09Z" duration-ms="144220">
+      <class name="scripts.TestProductMyProfile">
+        <test-method is-config="true" signature="initReport()[pri:0, instance:scripts.TestProductMyProfile@38c6f217]" started-at="2018-02-16T01:12:43Z" name="initReport" finished-at="2018-02-16T01:12:44Z" duration-ms="1645" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BaseTestLogin.initReport]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- initReport -->
+        <test-method is-config="true" signature="initGlobalVar()[pri:0, instance:scripts.TestProductMyProfile@38c6f217]" started-at="2018-02-16T01:12:44Z" name="initGlobalVar" finished-at="2018-02-16T01:12:44Z" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BaseTestLogin.initGlobalVar]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- initGlobalVar -->
+        <test-method is-config="true" signature="initApplication(java.lang.String)[pri:0, instance:scripts.TestProductMyProfile@38c6f217]" started-at="2018-02-16T01:12:44Z" name="initApplication" finished-at="2018-02-16T01:12:54Z" duration-ms="9922" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BaseTestLogin.initApplication]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- initApplication -->
+        <test-method is-config="true" signature="preCondition(java.lang.reflect.Method)[pri:0, instance:scripts.TestProductMyProfile@38c6f217]" started-at="2018-02-16T01:12:54Z" name="preCondition" finished-at="2018-02-16T01:13:17Z" duration-ms="22361" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void scripts.TestProductMyProfile.testProduct() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BaseTestLogin.preCondition]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- preCondition -->
+        <test-method signature="testProduct()[pri:0, instance:scripts.TestProductMyProfile@38c6f217]" started-at="2018-02-16T01:13:17Z" name="testProduct" finished-at="2018-02-16T01:15:06Z" duration-ms="109345" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[The value of products type fetched is-------->Beta]]>
+            </line>
+            <line>
+              <![CDATA[The value of products type fetched is-------->Market Ready]]>
+            </line>
+            <line>
+              <![CDATA[The value 1 after Update of product name---------->product1]]>
+            </line>
+            <line>
+              <![CDATA[The value 2 after Update of product name--------->Mobile Gadgets]]>
+            </line>
+            <line>
+              <![CDATA[The value 1 after update of product stage------->Beta]]>
+            </line>
+            <line>
+              <![CDATA[The value 2after update of product stage------->Market Ready]]>
+            </line>
+            <line>
+              <![CDATA[Exception in validating the products data in UIclass pages.ProductsMyProfilePage]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : TestProductMyProfile.testProduct]]>
+            </line>
+            <line>
+              <![CDATA[Test Method resides in scripts.TestProductMyProfile]]>
+            </line>
+            <line>
+              <![CDATA[Test Status: Pass]]>
+            </line>
+            <line>
+              <![CDATA[About to begin executing following method : BaseTestLogin.postCondition]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testProduct -->
+        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:scripts.TestProductMyProfile@38c6f217]" started-at="2018-02-16T01:15:06Z" name="postCondition" finished-at="2018-02-16T01:15:06Z" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testProduct status=SUCCESS method=TestProductMyProfile.testProduct()[pri:0, instance:scripts.TestProductMyProfile@38c6f217] output=The value of products type fetched is-------->Beta]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BaseTestLogin.postCondition]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- postCondition -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:scripts.TestProductMyProfile@38c6f217]" started-at="2018-02-16T01:15:06Z" name="closeApplication" finished-at="2018-02-16T01:15:06Z" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BaseTestLogin.closeApplication]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+        <test-method is-config="true" signature="CloseTheConnection()[pri:0, instance:scripts.TestProductMyProfile@38c6f217]" started-at="2018-02-16T01:15:06Z" name="CloseTheConnection" finished-at="2018-02-16T01:15:09Z" duration-ms="2525" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BaseTestLogin.CloseTheConnection]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CloseTheConnection -->
+        <test-method is-config="true" signature="publishReport()[pri:0, instance:scripts.TestProductMyProfile@38c6f217]" started-at="2018-02-16T01:15:09Z" name="publishReport" finished-at="2018-02-16T01:15:09Z" duration-ms="523" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : BaseTestLogin.publishReport]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- publishReport -->
+      </class> <!-- scripts.TestProductMyProfile -->
+    </test> <!-- Ge_Regression15jan -->
+  </suite> <!-- Default Suite -->
+</testng-results>
