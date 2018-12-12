@@ -122,7 +122,7 @@ public class LoginPage extends BasePageLogin
     }
 
 
-    @FindBy(xpath = "//a[contains(text(),'Forgot Password?')]")
+    @FindBy(xpath = "//a[@ng-click='vm.requestResetPassword()']")
     private WebElement forgotPwd;
 
     public void clickForgotPwd() {
