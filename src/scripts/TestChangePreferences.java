@@ -26,6 +26,7 @@ public class TestChangePreferences extends BaseTestLogin {
             Thread.sleep(3000);
             chgPrefObj.clickSavePreferencesButton();
             Thread.sleep(5000);
+            chgPrefObj.clickGoToDashboardLink();
         }
         catch (Exception e1) {
             e1.printStackTrace();

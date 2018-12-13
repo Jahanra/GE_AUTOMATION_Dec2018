@@ -12,7 +12,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.List;
 
-public class DashboardPage extends BasePageLogin {
+public class DashboardPage extends HomePage {
 
     public DashboardPage(WebDriver driver, Connection conn, Statement stmt, ResultSet resultSet, Actions actions) {
 
@@ -94,9 +94,52 @@ public class DashboardPage extends BasePageLogin {
     @FindBy(xpath = "//span[contains(text(),'Sign out')]")
     private WebElement signOutLink;
 
+    @FindBy(xpath="//li[@ng-repeat='horizontal in account.horizontalDescription']//span")
+    private WebElement technologySelected;
+
+    @FindBy(xpath="//li[@ng-repeat='sector in shortIndustries']//span")
+            private WebElement industrySelected;
+
+    @FindBy(xpath="//table[@id='dashboard-top-10']//section[@ng-bind='company.companyName']")
+            private List<WebElement> companyNames;
+
+
+    @FindBy(xpath="//tbody[@ng-repeat='company in top10Startups']//img[@ng-show='company.companyLogoUrl']")
+    private  List<WebElement> companyLogos;
+
+    @FindBy(xpath="//tbody[@ng-repeat='company in top10Startups']//span[@class='text ng-binding']")
+     private  List<WebElement> companyMaturities;
+
+    @FindBy(xpath="//tbody[@ng-repeat='company in top10Startups']//section[@class='tech ng-binding']")
+    private  List<WebElement> companyTechnologies;
+
+    @FindBy(xpath="//tbody[@ng-repeat='company in top10Startups']//section[@class='city ng-binding']")
+    private List<WebElement>  companyCountries;
+
+    @FindBy(xpath = "//tbody[@ng-repeat='company in top10Startups']//span[@class='ng-binding']")
+            private List<WebElement> companyGeScores;
+
+
+
     String textMatch = null;
     public String countValue = null;
     public String searchText = null;
+
+   String parentTechnology=null;
+   String parentIndustry=null;
+
+   String companyName=null;
+   String  companyMaturity=null;
+   String companyTechnology=null;
+   String companyCountry= null;
+   String companyGePiiScore;
+   String companyLogoUrl=null;
+
+   String nameUI=null;
+    String technologyUI=null;
+    String maturityUI=null;
+    String urlUI=null;
+    String gepiiScoreUI=null;
 
 
     public void clickOnAdvancedSearch() throws InterruptedException
@@ -197,5 +240,68 @@ public class DashboardPage extends BasePageLogin {
         return searchText;
     }
 
+    public void checkTechnologySaved(String parentTechnologyExcel) {
+        actions.moveToElement(technologySelected);
+        parentTechnology = technologySelected.getText().toString();
+        if (parentTechnology.equalsIgnoreCase(parentTechnologyExcel)) {
+            Reporter.log("Parent Technology Matched", true);
+        } else
+            {
+              Reporter.log("Parent Technology deoesnt match",true);
+        }
+        actions.build().perform();
+    }
 
+
+    public void  checkIndustrySaved(String parentIndustryExcel)
+    {
+        actions.moveToElement(industrySelected);
+        parentTechnology = industrySelected.getText().toString();
+        if (parentIndustry.equalsIgnoreCase(parentIndustryExcel)) {
+            Reporter.log("Parent Industry  Matched", true);
+        } else
+        {
+            Reporter.log("Parent Industry  deoesnt match",true);
+        }
+        actions.build().perform();
+    }
+
+    public void  checkTop10Startups(String query)
+    {
+        for (int i = 0; i <= companyNames.size(); i++)
+        {
+            try
+            {
+                stmt = conn.createStatement();
+                resultSet = stmt.executeQuery(query);
+                while (resultSet.next()) {
+                    companyName = resultSet.getString("company_name");
+                    companyTechnology = resultSet.getString("horizontal");
+                    companyMaturity = resultSet.getString("maturity_status");
+                    companyCountry = resultSet.getString("country");
+                    companyLogoUrl = resultSet.getString("company_img_url");
+                    companyGePiiScore = resultSet.getString("ge_pii_Score");
+                    if (nameUI.equalsIgnoreCase(companyNames.get(i).getText()) &&
+                            technologyUI.equalsIgnoreCase(companyTechnologies.get(i).getText()) &&
+                            maturityUI.equalsIgnoreCase(companyMaturities.get(i).getText()) &&
+                            urlUI.equalsIgnoreCase(companyLogos.get(i).getText())&&
+                            gepiiScoreUI.equalsIgnoreCase(companyGeScores.get(i).getText()))
+                    {
+                         Reporter.log("The Startup details are correct",true);
+                    }
+                    else
+                        {
+                        Reporter.log("The startup details are incorrect",true);
+                    }
+
+                }
+
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+                Reporter.log("Exception in validating startups listed in data base", true);
+            }
+
+        }
+    }
 }
